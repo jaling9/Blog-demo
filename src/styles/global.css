@@ -1,10 +1,13 @@
 @import url("https://fonts.cdnfonts.com/css/work-sans");
+@import url("https://fonts.cdnfonts.com/css/cascadia-mono");
+
 html {
-    background-color: #fff9f9;
+    background-color: #fefefe;
     font-family: "Work Sans", sans-serif;
 }
 
 body {
+    display: block;
     margin: 0 auto;
     width: 80%;
     max-width: 80ch;
@@ -15,23 +18,20 @@ body {
 * {
     box-sizing: border-box;
 }
-/* h1,
-h2,
-h3 {
-    background-color: #f2f2f2;
-} */
+
 h1 {
     font-weight: 700;
     margin: 1rem 0;
     font-size: 2.5rem;
-    background-image: linear-gradient(to right, #5745fd, #12a5a3);
+    background-image: linear-gradient(to right, #2d62ff, #12a5a3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* display: inline-block; */
 }
-
-h2 {
+h2,
+h3 {
     font-weight: 600;
-    background-image: linear-gradient(to right, #5745fd, #12a5a3);
+    background-image: linear-gradient(to right, #2d62ff, #12a5a3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -97,7 +97,7 @@ body a:hover::before {
 
 .nav-links a:hover,
 a:focus {
-    color: #fff;
+    color: #ffffff;
     background-color: #252525;
 }
 
@@ -106,12 +106,6 @@ a:focus {
 }
 
 @media screen and (min-width: 636px) {
-    .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
     .nav-links {
         margin-left: 0em;
         display: block;
@@ -139,4 +133,13 @@ html.dark {
 
 .dark .nav-links a {
     color: #fff;
+    border: #fefefe solid 1.5px;
+}
+.dark a {
+    color: #fff;
+}
+.dark .nav-links a:hover,
+a:focus {
+    color: #322d2d;
+    background-color: #ffffff;
 }
