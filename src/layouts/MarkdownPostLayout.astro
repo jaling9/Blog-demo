@@ -4,76 +4,101 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <p>{frontmatter.pubDate.slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>作者: {frontmatter.author}</p>
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-  <slot />
+    <div class="titleDescription">
+        <p>作者: {frontmatter.author}</p>
+        <p>{frontmatter.pubDate.slice(0, 10)}</p>
+    </div>
+    <p><em>{frontmatter.description}</em></p>
+
+    <img
+        src={frontmatter.image.url}
+        width="300"
+        alt={frontmatter.image.alt}
+    />
+    <slot />
 </BaseLayout>
 <style is:global>
-  
-  img{
-    max-width: 100%;
-    height: auto;
-  }
-  
-  pre{
-    padding: 12px 12px;
-    margin: 1.5em 10px;
-    font-size: 0.8em;
-    border-radius: 8px;
-  
-  }
-  pre code{
-    font-family: 'Cascadia Mono', Courier, monospace;
-    background: none;
-    color: #fff;
-    padding: 2px 2px;
-    margin: 0;
-    font-size: 1.2em;
-    border-radius: 0;
-  }
-  .dark pre code{
-    font-family: 'Cascadia Mono', Courier, monospace;
-    background: none;
-    color: #fff;
-    padding: 2px 2px;
-    margin: 0;
-    font-size: 1.2em;
-    border-radius: 0;
-  }
-  code{
-    font-family: 'Cascadia Mono', Courier, monospace;
-    font-size: 1em;
-      background: #e7e7e7;
-      border-radius: 2px;
+    strong {
+        background-image: linear-gradient(to right, #12a5a3, #2d62ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
     }
-      .dark code {
-        font-family: 'Cascadia Mono', Courier, monospace;
-    font-size: 1em;
-      background: #6f6f6f;
-      border-radius: 2px;
-}
-blockquote p{
-  margin: 0;
-  padding: 0;
-}
-  blockquote{
-    border: 1.5px solid #363943;
-    padding: 10px 10px;
-    margin: 12px 10px;
-    font-style: italic;
-    border-radius: 8px;
-    box-shadow: #e9e9e9 4px 6px 25px 0px;
-  }
+    .titleDescription {
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border: none;
+    }
 
+    .titleDescription p,
+    .titleDescription div {
+        margin: 0 6px;
+        padding: 8px 8px;
+        border: #cacaca 1.5px solid;
+        border-radius: 8px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 
-.dark blockquote {
-  border: 1.5px solid #b6b6b6;
-    padding: 10px 10px;
-    margin: 12px 10px;
-    font-style: italic;
-    border-radius: 8px;
-    box-shadow: none;
-}
+    pre {
+        padding: 12px 12px;
+        margin: 1.5em 10px;
+        font-size: 0.8em;
+        border-radius: 8px;
+    }
+    pre code {
+        font-family: "Cascadia Mono", Courier, monospace;
+        background: none;
+        color: #fff;
+        padding: 2px 2px;
+        margin: 0;
+        font-size: 1.2em;
+        border-radius: 0;
+    }
+    .dark pre code {
+        font-family: "Cascadia Mono", Courier, monospace;
+        background: none;
+        color: #fff;
+        padding: 2px 2px;
+        margin: 0;
+        font-size: 1.2em;
+        border-radius: 0;
+    }
+    code {
+        font-family: "Cascadia Mono", Courier, monospace;
+        font-size: 1em;
+        background: #e7e7e7;
+        border-radius: 2px;
+    }
+    .dark code {
+        font-family: "Cascadia Mono", Courier, monospace;
+        font-size: 1em;
+        background: #6f6f6f;
+        border-radius: 2px;
+    }
+    blockquote p {
+        margin: 0;
+        padding: 0;
+    }
+    blockquote {
+        border: 1.5px solid #363943;
+        padding: 10px 10px;
+        margin: 12px 10px;
+        font-style: italic;
+        border-radius: 8px;
+        box-shadow: #e9e9e9 4px 6px 25px 0px;
+    }
+
+    .dark blockquote {
+        border: 1.5px solid #b6b6b6;
+        padding: 10px 10px;
+        margin: 12px 10px;
+        font-style: italic;
+        border-radius: 8px;
+        box-shadow: none;
+    }
 </style>
