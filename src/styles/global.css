@@ -1,11 +1,12 @@
+@import url("https://fonts.cdnfonts.com/css/work-sans");
 html {
     background-color: #f1f5f9;
-    font-family: sans-serif;
+    font-family: "Work Sans", sans-serif;
 }
 
 body {
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
     max-width: 80ch;
     padding: 1rem;
     line-height: 1.5;
@@ -16,10 +17,36 @@ body {
 }
 
 h1 {
+    font-weight: 700;
     margin: 1rem 0;
     font-size: 2.5rem;
+    background-image: linear-gradient(to right, #168e88 0%, #8b76ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+h2 {
+    font-weight: 600;
+    background-image: linear-gradient(to right, #168e88 0%, #8b76ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+a:link {
+    color: teal;
+    text-decoration: none;
+}
+
+body > a {
+    color: #168e88;
+    text-decoration: none;
+}
+a:hover {
+    background-color: #093b50;
+    color: #f9f8ff;
+}
+blockquote {
+    box-shadow: #093b50;
+}
 /* nav styles */
 
 .hamburger {
@@ -36,6 +63,10 @@ h1 {
 }
 
 .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     top: 5rem;
     left: 48px;
@@ -46,7 +77,6 @@ h1 {
 
 .nav-links a {
     display: block;
-    text-align: center;
     padding: 10px 0;
     text-decoration: none;
     font-size: 1.2rem;

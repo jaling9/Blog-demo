@@ -6,7 +6,40 @@ const { frontmatter } = Astro.props;
 <BaseLayout pageTitle={frontmatter.title}>
   <p>{frontmatter.pubDate.slice(0, 10)}</p>
   <p><em>{frontmatter.description}</em></p>
-  <p>Written by: {frontmatter.author}</p>
+  <p>作者: {frontmatter.author}</p>
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
   <slot />
 </BaseLayout>
+<style is:global>
+  pre{
+    background-color: #e8e8e8;
+    /* color: #fff; */
+    padding: 12px 12px;
+    margin: 1.5em 10px;
+    font-size: 0.8em;
+    border-radius: 8px;
+  
+  }
+  pre code{
+    font-family: 'Courier New', Courier, monospace;
+    background: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8em;
+    border-radius: 0;
+  }
+  code{
+      padding: 1px 1px;
+      background: #e7e7e7;
+      border-radius: 2px;
+    }
+  blockquote{
+    border: 1.5px solid #363943;
+    padding: 0.5em 10px;
+    margin: 1.5em 10px;
+    font-style: italic;
+    border-radius: 8px;
+    box-shadow: #d9d9d9 4px 6px 25px 0px;
+  }
+</style>
