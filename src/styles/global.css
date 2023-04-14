@@ -1,92 +1,155 @@
+@import url("https://fonts.cdnfonts.com/css/work-sans");
+@import url("https://fonts.cdnfonts.com/css/cascadia-mono");
+
 html {
-  background-color: #f1f5f9;
-  font-family: sans-serif;
+    background-color: #fefefe;
+    font-family: "Work Sans", sans-serif;
 }
 
 body {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
-  line-height: 1.5;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 80ch;
+    padding: 1rem;
+    line-height: 1.5;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 h1 {
-  margin: 1rem 0;
-  font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    background-image: linear-gradient(to right, #2d62ff, #12a5a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h2,
+h3,
+h3,
+h4,
+h5,
+h6 {
+    background-image: linear-gradient(to right, #12a5a3, #2d62ff, #12a5a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body a {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+body a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #5745fd, #12a5a3);
+    transition: width 0.3s ease;
+    z-index: -1;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body a:hover::before {
+    width: 100%;
 }
 
 /* nav styles */
 
 .hamburger {
-  padding-right: 20px;
-  cursor: pointer;
+    padding-right: 20px;
+    cursor: pointer;
 }
 
 .hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #ff9776;
 }
 
 .nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
-  display: none;
-  margin: 0;
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    top: 5rem;
+    left: 0px;
+    background-color: #ff9776;
+    display: none;
+    margin: 0;
 }
 
 .nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .nav-links a:hover,
 a:focus {
-  background-color: #ff9776;
+    color: #ffffff;
+    background-color: #252525;
+    text-decoration: none;
 }
 
 .expanded {
-  display: unset;
+    display: unset;
 }
 
 @media screen and (min-width: 636px) {
-  .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-  }
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .nav-links {
+        margin-left: 0em;
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+    }
 
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
-  }
+    .nav-links a {
+        display: inline-block;
+        padding: 8px 20px;
+        border: #000 solid 2px;
+        border-radius: 4px;
+        text-decoration: none;
+    }
 
-  .hamburger {
-    display: none;
-  }
+    .hamburger {
+        display: none;
+    }
 }
 
 html.dark {
-  background-color: #0d0950;
-  color: #fff;
+    background-color: #093b50;
+    color: #fff;
 }
 
 .dark .nav-links a {
-  color: #fff;
+    color: #fff;
+    border: #fefefe solid 1.5px;
+}
+.dark a {
+    color: #fff;
+}
+.dark .nav-links a:hover,
+a:focus {
+    color: #322d2d;
+    background-color: #ffffff;
 }
