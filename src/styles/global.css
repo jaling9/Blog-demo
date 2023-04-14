@@ -15,19 +15,23 @@ body {
 * {
     box-sizing: border-box;
 }
-
+/* h1,
+h2,
+h3 {
+    background-color: #f2f2f2;
+} */
 h1 {
     font-weight: 700;
     margin: 1rem 0;
     font-size: 2.5rem;
-    background-image: linear-gradient(to right, #168e88 0%, #8b76ff 100%);
+    background-image: linear-gradient(to right, #8f64e6, #1b86b7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 h2 {
     font-weight: 600;
-    background-image: linear-gradient(to right, #168e88 0%, #8b76ff 100%);
+    background-image: linear-gradient(to right, #8f64e6, #1b86b7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -63,13 +67,15 @@ blockquote {
 }
 
 .nav-links {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start; */
     width: 100%;
+    margin-left: 0;
+    padding: 0;
     top: 5rem;
-    left: 48px;
+    left: 0px;
     background-color: #ff9776;
     display: none;
     margin: 0;
@@ -94,8 +100,14 @@ a:focus {
 }
 
 @media screen and (min-width: 636px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
     .nav-links {
-        margin-left: 5em;
+        margin-left: 0em;
         display: block;
         position: static;
         width: auto;
