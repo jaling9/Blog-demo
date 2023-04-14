@@ -3,11 +3,11 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: "Vue3快速上手"
 pubDate: 2023-07-01
 description: "This is the first post of my new Astro blog."
-author: "Astro Learner"
+author: "xiaoman"
 image:
     url: "https://images.unsplash.com/photo-1681165045474-d388d11ace96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
     alt: "The Astro logo with the word One."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["CSS3", "笔记", "前端"]
 ---
 
 # Vue3 快速上手
@@ -171,6 +171,7 @@ npm run dev
 ### Vue3.0 的响应式
 
 -   实现原理:
+
     -   通过 Proxy（代理）: 拦截对象中任意属性的变化, 包括：属性值的读写、属性的添加、属性的删除等。
     -   通过 Reflect（反射）: 对源对象的属性进行操作。
     -   MDN 文档中描述的 Proxy 与 Reflect：

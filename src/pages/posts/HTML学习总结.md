@@ -3,11 +3,11 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: "HTML语义化笔记"
 pubDate: 2023-07-01
 description: "This is the first post of my new Astro blog."
-author: "Astro Learner"
+author: "xiaoman"
 image:
     url: "https://images.unsplash.com/photo-1681165045474-d388d11ace96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
     alt: "The Astro logo with the word One."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["CSS3", "笔记", "前端"]
 ---
 
 前前后后看了不少次 HTML 教程了，总是停留在看的阶段，没有亲自动手去写前端页面。

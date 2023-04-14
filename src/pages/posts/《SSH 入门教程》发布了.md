@@ -3,11 +3,11 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: "SSH教程"
 pubDate: 2023-07-01
 description: "This is the first post of my new Astro blog."
-author: "Astro Learner"
+author: "xiaoman"
 image:
     url: "https://images.unsplash.com/photo-1681165045474-d388d11ace96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
     alt: "The Astro logo with the word One."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["CSS3", "笔记", "前端"]
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.ruanyifeng.com](https://www.ruanyifeng.com/blog/2020/12/ssh-tutorial.html)

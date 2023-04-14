@@ -54,10 +54,14 @@ const { frontmatter } = Astro.props;
       background: #6f6f6f;
       border-radius: 2px;
 }
+blockquote p{
+  margin: 0;
+  padding: 0;
+}
   blockquote{
     border: 1.5px solid #363943;
-    padding: 0.5em 0.5em;
-    margin: 1.5em 1.5em;
+    padding: 10px 10px;
+    margin: 12px 10px;
     font-style: italic;
     border-radius: 8px;
     box-shadow: #e9e9e9 4px 6px 25px 0px;
@@ -66,8 +70,8 @@ const { frontmatter } = Astro.props;
 
 .dark blockquote {
   border: 1.5px solid #b6b6b6;
-    padding: 0.5em 10px;
-    margin: 1.5em 10px;
+    padding: 10px 10px;
+    margin: 12px 10px;
     font-style: italic;
     border-radius: 8px;
     box-shadow: none;
