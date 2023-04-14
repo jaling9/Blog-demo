@@ -9,7 +9,7 @@ export default function Greeting({ messages }) {
 
     return (
         <div>
-            <h3>{greeting}! 非常欢迎你的到来!</h3>
+            <h3>{greeting}你好! </h3>
             <button onClick={() => setGreeting(randomMessage())}>打招呼</button>
         </div>
     );

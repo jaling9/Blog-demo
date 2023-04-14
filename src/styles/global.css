@@ -1,6 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/work-sans");
 html {
-    background-color: #f1f5f9;
+    background-color: #fff9f9;
     font-family: "Work Sans", sans-serif;
 }
 
@@ -24,33 +24,42 @@ h1 {
     font-weight: 700;
     margin: 1rem 0;
     font-size: 2.5rem;
-    background-image: linear-gradient(to right, #8f64e6, #1b86b7);
+    background-image: linear-gradient(to right, #5745fd, #12a5a3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 h2 {
     font-weight: 600;
-    background-image: linear-gradient(to right, #8f64e6, #1b86b7);
+    background-image: linear-gradient(to right, #5745fd, #12a5a3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-a:link {
-    color: teal;
+body a {
+    position: relative;
+    display: inline-block;
+    color: #000;
     text-decoration: none;
 }
 
-body > a {
-    color: #168e88;
-    text-decoration: none;
+body a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #5745fd, #12a5a3);
+    transition: width 0.3s ease;
+    z-index: -1;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-a:hover {
-    background-color: #093b50;
-    color: #f9f8ff;
+
+body a:hover::before {
+    width: 100%;
 }
-blockquote {
-    box-shadow: #093b50;
-}
+
 /* nav styles */
 
 .hamburger {
@@ -67,10 +76,6 @@ blockquote {
 }
 
 .nav-links {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; */
     width: 100%;
     margin-left: 0;
     padding: 0;
@@ -92,7 +97,8 @@ blockquote {
 
 .nav-links a:hover,
 a:focus {
-    background-color: #ff9776;
+    color: #fff;
+    background-color: #252525;
 }
 
 .expanded {
@@ -116,7 +122,9 @@ a:focus {
 
     .nav-links a {
         display: inline-block;
-        padding: 15px 20px;
+        padding: 8px 20px;
+        border: #000 solid 1.5px;
+        border-radius: 4px;
     }
 
     .hamburger {
