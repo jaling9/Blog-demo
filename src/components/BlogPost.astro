@@ -15,16 +15,22 @@ const dateStr = date.toLocaleDateString()
     margin: 12px 0px;
         list-style: none;
         list-style-position: inside;
-        
         justify-content: space-between;
     }
     .liStyle span{
         color: rgb(136, 136, 136);
         font-size: small;
         text-align: end;
-        /* display: block; */
-
-       
+    }
+    li a::before{
+        background: linear-gradient(to right, #5745fd, #12a5a3);
+        transition: width 0.3s ease;
+        z-index: -1;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    li a:hover::before{
+        width: 100%;
     }
 
 </style>

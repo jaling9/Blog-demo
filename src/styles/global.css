@@ -58,14 +58,14 @@ a::before {
     width: 0;
     height: 2px;
     background: linear-gradient(to right, #5745fd, #12a5a3);
-    transition: width 0.3s ease;
+    /* transition: width 0.3s ease;
     z-index: -1;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
 }
 
 a:hover::before {
-    width: 100%;
+    /* width: 100%; */
 }
 
 /* nav styles */
