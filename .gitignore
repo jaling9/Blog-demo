@@ -1,5 +1,6 @@
 # build output
 dist/
+src/pages/posts/.Obsidian/
 
 # dependencies
 node_modules/
