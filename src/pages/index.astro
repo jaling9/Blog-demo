@@ -6,17 +6,14 @@ const pageTitle = "小满的博客";
 <BaseLayout pageTitle={pageTitle}>
     <div class="indexContent"><h2>你好！我是小满，一个数据分析师和编程爱好者！</h2>
         <p>
-            你好，我是一名<strong>数据分析师</strong>和<strong>编程爱好者</strong
+            你好，我是一名<strong>数据分析师</strong>和<strong>设计和编程爱好者</strong
             >。我对于数据分析和数据挖掘
             有着浓厚的兴趣，喜欢利用编程语言和数据工具来解决实际问题。我熟练掌握多种编程语言，包括<strong
                 >Python</strong
             >、<strong>TypeScript</strong>、<strong>Golang</strong>、<strong
                 >Node.js</strong
-            >和<strong>SQL</strong>等，并且善于使用各种<strong
-                >数据可视化工具</strong
-            >，比如<strong>Tableau</strong>和<strong>Power BI</strong
-            >等。我也有着良好的数学
-            和统计基础，能够运用这些理论知识来解决实际问题。我非常热爱学习和探索新技术，希望能够不断提升自己的技能和知识，成为一名优秀的<strong
+            >和<strong>SQL</strong>等，并且善于使用各种数据可视化工具，比如Tableau和Power BI
+            等。我也有着良好的数学和统计基础，能够运用这些理论知识来解决实际问题。我非常热爱学习和探索新技术，希望能够不断提升自己的技能和知识，成为一名优秀的<strong
                 >数据分析师</strong
             >和<strong>程序员</strong>。
         </p>
@@ -26,10 +23,18 @@ const pageTitle = "小满的博客";
             client:load
             messages={["大佬", "帅哥", "美女", "同学"]}
         /> -->
-        <a href="/blog/">阅读 </a>
+        <a href="/blog/"> <img src="/src/images/arrow-right-svgrepo-com.svg" height="30px" ></a>
     </div>
 </BaseLayout>
 <style>
+    a img{
+        display: block;
+        margin: 0 auto;
+    }
+    a img:hover{
+        color: #ffffff;
+       
+    }
 
 .indexContent {
     display: flex;
@@ -43,28 +48,32 @@ strong {
     -webkit-text-fill-color: transparent;
 }
 .indexContent a{
+    font-family: 'Rounds Black', sans-serif;                                       
     margin-top: 24px;
     color: #141414;
+    font-size: 20px;
     text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-    width: 200px;
+    text-decoration: none !important;
+    font-weight: bold;
+    width: 150px;
     display: block;
     padding: 12px 36px;
     border: #252525 1.5px solid;
     border-radius: 4px;
-    /* background-color: #252525; */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    }
-    .indexContent a:hover{
-    text-decoration: none;
+    transition: box-shadow  0.55s ease-in-out;
+    transition:  background-color 0.55s ease-in-out;;
+
+}
+
+.indexContent a:hover{
+    text-decoration: none !important;
     border: #252525 1.5px solid;
     border-radius: 4px;
     color: #fcfcfc;
     background-color: #252525;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
+}
 
    
 
