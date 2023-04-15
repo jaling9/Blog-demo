@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-    font-weight: 700;
+    font-weight: bold;
     margin: 1rem 0;
     font-size: 2.5rem;
     background-image: linear-gradient(to right, #2d62ff, #12a5a3);
