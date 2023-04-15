@@ -1,4 +1,28 @@
 ---
-const { title, url } = Astro.props
+const { title, url ,pubDate} = Astro.props
+
+// 把pubDate转换成日期格式
+const date = new Date(pubDate)
+
+// 把日期格式转换成字符串
+const dateStr = date.toLocaleDateString()
+
 ---
-<li><a href={url}>{title}</a></li>
+<li ><a href={url}>{title}</a>    ---  <span>{dateStr}</span></li>
+
+<style>
+  li{
+    margin: 4px 0px;
+        list-style: decimal;
+        list-style-position: inside;
+        /* display: flex; */
+        justify-content: space-between;
+    }
+    li span{
+        text-align: end;
+        /* display: block; */
+
+       
+    }
+
+</style>

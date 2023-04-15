@@ -33,6 +33,8 @@ h3,
 h4,
 h5,
 h6 {
+    font-weight: bold;
+
     background-image: linear-gradient(to right, #12a5a3, #2d62ff, #12a5a3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
