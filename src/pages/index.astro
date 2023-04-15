@@ -3,35 +3,66 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting";
 const pageTitle = "小满的博客";
 ---
-
 <BaseLayout pageTitle={pageTitle}>
-    <h2>你好！我是小满，一个数据分析师和编程爱好者！</h2>
-    <p>
-        你好，我是一名<strong>数据分析师</strong>和<strong>编程爱好者</strong
-        >。我对于数据分析和数据挖掘
-        有着浓厚的兴趣，喜欢利用编程语言和数据工具来解决实际问题。我熟练掌握多种编程语言，包括<strong
-            >Python</strong
-        >、<strong>TypeScript</strong>、<strong>Golang</strong>、<strong
-            >Node.js</strong
-        >和<strong>SQL</strong>等，并且善于使用各种<strong
-            >数据可视化工具</strong
-        >，比如<strong>Tableau</strong>和<strong>Power BI</strong
-        >等。我也有着良好的数学
-        和统计基础，能够运用这些理论知识来解决实际问题。我非常热爱学习和探索新技术，希望能够不断提升自己的技能和知识，成为一名优秀的<strong
-            >数据分析师</strong
-        >和<strong>程序员</strong>。
-    </p>
-
-    <div></div>
-    <Greeting
-        client:load
-        messages={["大佬", "帅哥", "美女", "同学"]}
-    />
+    <div class="indexContent"><h2>你好！我是小满，一个数据分析师和编程爱好者！</h2>
+        <p>
+            你好，我是一名<strong>数据分析师</strong>和<strong>编程爱好者</strong
+            >。我对于数据分析和数据挖掘
+            有着浓厚的兴趣，喜欢利用编程语言和数据工具来解决实际问题。我熟练掌握多种编程语言，包括<strong
+                >Python</strong
+            >、<strong>TypeScript</strong>、<strong>Golang</strong>、<strong
+                >Node.js</strong
+            >和<strong>SQL</strong>等，并且善于使用各种<strong
+                >数据可视化工具</strong
+            >，比如<strong>Tableau</strong>和<strong>Power BI</strong
+            >等。我也有着良好的数学
+            和统计基础，能够运用这些理论知识来解决实际问题。我非常热爱学习和探索新技术，希望能够不断提升自己的技能和知识，成为一名优秀的<strong
+                >数据分析师</strong
+            >和<strong>程序员</strong>。
+        </p>
+    
+        
+        <!-- <Greeting
+            client:load
+            messages={["大佬", "帅哥", "美女", "同学"]}
+        /> -->
+        <a class="read-a" href="/blog/">BLOGS </a>
+    </div>
 </BaseLayout>
 <style>
+
+    .indexContent {
+        display: flex;
+        flex-direction: column;
+        align-items:stretch;
+        justify-content: flex-start;
+    }
     strong {
         background-image: linear-gradient(to right, #2d62ff, #12a5a3);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+-webkit-text-fill-color: transparent;
+}
+.read-a{
+    margin: 48px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    width: 300px;
+    display: block;
+    padding: 12px 36px;
+    border-radius: 4px;
+    background-color: #252525;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+transition: box-shadow 0.3s ease;
     }
+.read-a:hover{
+text-decoration: none;
+border:none;
+border-radius: 4px;
+color: #fcfcfc;
+background-color: #252525;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 </style>

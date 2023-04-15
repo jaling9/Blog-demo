@@ -9,7 +9,7 @@ html {
 body {
     display: block;
     margin: 0 auto;
-    width: 80%;
+    width: 95%;
     max-width: 80ch;
     padding: 1rem;
     line-height: 1.5;
@@ -45,6 +45,7 @@ body a {
 }
 
 body a::before {
+    word-wrap: break-word;
     content: "";
     position: absolute;
     left: 0;

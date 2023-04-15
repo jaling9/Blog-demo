@@ -42,6 +42,7 @@ const { frontmatter } = Astro.props;
     img {
         max-width: 100%;
         height: auto;
+        border-radius: 8px;
     }
 
     pre {
@@ -69,10 +70,11 @@ const { frontmatter } = Astro.props;
         border-radius: 0;
     }
     code {
+        padding: 0.15em 0.4em;
         font-family: "Cascadia Mono", Courier, monospace;
         font-size: 1em;
         background: #e7e7e7;
-        border-radius: 2px;
+        border-radius: 4px;
     }
     .dark code {
         font-family: "Cascadia Mono", Courier, monospace;
