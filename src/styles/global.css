@@ -39,12 +39,14 @@ h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 a {
+    /* width: 100%; */
     position: relative;
     display: inline-block;
     color: #000;
-
     text-decoration: none;
+    /* word-wrap: break-word; */
 }
 
 a::before {
@@ -113,12 +115,6 @@ a:focus {
 }
 
 @media screen and (min-width: 636px) {
-    nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
     .nav-links {
         margin-left: 0em;
         display: block;
@@ -129,6 +125,7 @@ a:focus {
 
     .nav-links a {
         display: inline-block;
+
         padding: 8px 20px;
         border: #000 solid 2px;
         border-radius: 4px;

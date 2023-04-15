@@ -8,17 +8,19 @@ const date = new Date(pubDate)
 const dateStr = date.toLocaleDateString()
 
 ---
-<li ><a href={url}>{title}</a>    ---  <span>{dateStr}</span></li>
+<li class="liStyle"><a href={url}>{title}</a>     <span>{dateStr}</span></li>
 
 <style>
-  li{
-    margin: 4px 0px;
-        list-style: decimal;
+  .liStyle{
+    margin: 12px 0px;
+        list-style: none;
         list-style-position: inside;
-        /* display: flex; */
+        
         justify-content: space-between;
     }
-    li span{
+    .liStyle span{
+        color: rgb(136, 136, 136);
+        font-size: small;
         text-align: end;
         /* display: block; */
 
