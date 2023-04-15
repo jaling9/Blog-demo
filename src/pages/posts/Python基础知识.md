@@ -5,7 +5,7 @@ pubDate: 2022-01-02
 # description: "This is the first post of my new Astro blog."
 author: "小满"
 image:
-    url: "./img/photo.avif"
+    url: "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
 tags: ["python", "计算机"]
 ---
 

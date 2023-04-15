@@ -5,7 +5,7 @@ pubDate: 2022-01-02
 # description: "This is the first post of my new Astro blog."
 author: "xiaoman"
 image:
-    url: "./img/photo.avif"
+    url: "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
 tags: ["python", "pyechart", "数据分析"]
 ---
 
@@ -20,7 +20,7 @@ tags: ["python", "pyechart", "数据分析"]
 **以下是四个文档和示例网站，各有特点。利用好这几个网站基本上就可以解决所有可能遇到的问题，而不需要在搜索引擎中漫无目的地翻查。**（喜欢这篇文章的新手朋友，建议先撸一遍下面 gallery.pyecharts.org 里面的代码再来看，因为文章写得不好，入门者很可能一头雾水）
 
 -   **Echarts**
-    -   [https://www.w3cschool.cn/echarts\_tutorial](https://www.w3cschool.cn/echarts_tutorial) （配置项的文档非常详尽）
+    -   [https://www.w3cschool.cn/echarts_tutorial](https://www.w3cschool.cn/echarts_tutorial) （配置项的文档非常详尽）
     -   [https://echarts.apache.org/zh/index.html](https://echarts.apache.org/zh/index.html) （[示例](https://echarts.apache.org/examples/zh/index.html)中有很多出色的可视化例子）
 -   **PyEcharts**
     -   [https://pyecharts.org/#/zh-cn/intro](https://pyecharts.org/#/zh-cn/intro) （PyEcharts 的 API 文档）
@@ -33,38 +33,52 @@ tags: ["python", "pyechart", "数据分析"]
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MyCharts</title>
-  <!-- 引入echarts.js 很多cdn源都可以引用 视情况使用 -->
-  <script src="https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js">
-  </script>
-</head>
-<body>
-  <!-- 图表容器--整个网页就是一个div 内容都是通过echarts.min.js渲染出来的 -->
-  <div id="main" style="width: 600px;height:400px;"></div>
-  <!-- 图表渲染的js代码 -->
-  <script type="text/javascript">
-      // 初始化echarts实例
-      var myChart = echarts.init(document.getElementById('main'));
-      // 指定图表的配置项和数据
-      var option = {
-          // option变量的内容是一个js对象类型(Object) 类似python中的字典类型
-          // option对象的属性(Attribute)可以赋值为各种js基本类型 包括对象类型
-          title: {text: 'ECharts 入门示例'}, // 图表标题选项
-          tooltip: {},                      // 工具提示选项
-          legend: {data:['销量']},          // 图例选项
-          xAxis: {data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]},
-          yAxis: {},  // 缺省时没有标注
-          series: [{  // series就是图表主体部分用到的数据
-              name: '销量',   // name参数用于区分多个series
-              type: 'bar',    // 图表类型 可以是line,scatter等
-              data: [5, 20, 36, 10, 10, 20] // 图表主体的数据 这里就是bar的长度
-          }]
-      };
-      // 使用刚指定的配置项和数据显示图表。
-      myChart.setOption(option);
-  </script>
-</body>
+    <head>
+        <title>MyCharts</title>
+        <!-- 引入echarts.js 很多cdn源都可以引用 视情况使用 -->
+        <script src="https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js"></script>
+    </head>
+    <body>
+        <!-- 图表容器--整个网页就是一个div 内容都是通过echarts.min.js渲染出来的 -->
+        <div
+            id="main"
+            style="width: 600px;height:400px;"
+        ></div>
+        <!-- 图表渲染的js代码 -->
+        <script type="text/javascript">
+            // 初始化echarts实例
+            var myChart = echarts.init(document.getElementById("main"));
+            // 指定图表的配置项和数据
+            var option = {
+                // option变量的内容是一个js对象类型(Object) 类似python中的字典类型
+                // option对象的属性(Attribute)可以赋值为各种js基本类型 包括对象类型
+                title: { text: "ECharts 入门示例" }, // 图表标题选项
+                tooltip: {}, // 工具提示选项
+                legend: { data: ["销量"] }, // 图例选项
+                xAxis: {
+                    data: [
+                        "衬衫",
+                        "羊毛衫",
+                        "雪纺衫",
+                        "裤子",
+                        "高跟鞋",
+                        "袜子",
+                    ],
+                },
+                yAxis: {}, // 缺省时没有标注
+                series: [
+                    {
+                        // series就是图表主体部分用到的数据
+                        name: "销量", // name参数用于区分多个series
+                        type: "bar", // 图表类型 可以是line,scatter等
+                        data: [5, 20, 36, 10, 10, 20], // 图表主体的数据 这里就是bar的长度
+                    },
+                ],
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+    </body>
 </html>
 ```
 
@@ -88,7 +102,7 @@ bar = (
     .add_xaxis(["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"])
     # 对应上面html文档中的 option.series：
     # 注意到 option.series 是js数组类型，也就是可以添加多个序列
-    .add_yaxis("销量", [5, 20, 36, 10, 10, 20]) 
+    .add_yaxis("销量", [5, 20, 36, 10, 10, 20])
     # global_opts 对应上面html文档中的 option 的属性
     # 例如 option.title 通过 title_opts 参数设置
     .set_global_opts(title_opts=opts.TitleOpts(title="Echarts 入门示例"))
@@ -107,7 +121,7 @@ pyecharts 整个项目结构见下图。绘图时用到的所有类都在 `pyech
 
 ## 三、选项配置
 
-选项配置主要是 set\_global\_opts 和 set\_series\_opts 两个方法，顾名思义前者设置的是对应的 js 代码中 `option` 变量的属性，后者设置的对应的 js 代码中 `option.series` 的属性。
+选项配置主要是 set_global_opts 和 set_series_opts 两个方法，顾名思义前者设置的是对应的 js 代码中 `option` 变量的属性，后者设置的对应的 js 代码中 `option.series` 的属性。
 
 ### 常用 options
 
@@ -175,7 +189,7 @@ Scatter().add_xaxis(...).add_yaxis(...).set_series_opts(
 )
 ```
 
-这段代码设置了散点图当鼠标悬停在某个点上时，该点的高亮颜色。在 Line、Bar 等很多图表中都适用，但是在地理图 Geo 的 set\_series\_opts 方法中没有这个参数。
+这段代码设置了散点图当鼠标悬停在某个点上时，该点的高亮颜色。在 Line、Bar 等很多图表中都适用，但是在地理图 Geo 的 set_series_opts 方法中没有这个参数。
 
 **并且**，尝试得多了，你可能会发现：
 
@@ -234,7 +248,7 @@ def write_js(file, locate, write):
     with open(file, 'r') as f:
         html = f.read()
     with open(file, 'w') as f:
-        f.write(html.replace(locate, write)) 
+        f.write(html.replace(locate, write))
 
 # locate 用于定位修改位置，这里建议使用 option 里面参数来定位
 # 比如这里准备写到 "title" 属性的前面：
@@ -283,7 +297,7 @@ from pyecharts.commons.utils import JsCode
 opts.ItemStyleOpts(color=JsCode(
     # 引入echarts.min.js后就可以使用echarts库的方法
     ''' new echarts.graphic.RadialGradient(
-        0.5, 0.5, 0.5,  
+        0.5, 0.5, 0.5,
         [{offset: 0, color: 'rgba(255,0,0,1)'},
         {offset: 1, color: 'rgba(0,0,255, 1)'}]
     ) '''
@@ -318,7 +332,7 @@ Scatter().add_xaxis(...).add_yaxis(
 ```python
 from pyecharts.commons.utils import JsCode
 tooltipJS = '''
-    function (param) { 
+    function (param) {
         // param参数接收的就是上图中的option.series.data这个数组中对应的元素
         var line1 = 'name: ' + param.data[0] + '<br/>';
         var line2 = 'value1: ' + param.data[1] + '<br/>';
@@ -354,7 +368,7 @@ bar.render()
 bar = pyc.Bar(
     init_opts=opts.InitOpts(theme=glbs.ThemeType.DARK, bg_color='#1a1c1d')
 ).add_xaxis(['A', 'B', 'C']).add_yaxis(
-    'test charts', 
+    'test charts',
     [(0,1,'低','更多信息'), (1,2,'中','更多信息'), (2,3,'高','更多信息')]
     # 通过元组列表强行传进更多的信息
     # 元组第一位是对应 xaxis 的序号，第二位是序列的值 这里就是bar的长度
@@ -394,8 +408,8 @@ Geo().add_schema(...).add_coordinate(...).add(
         '''
         function (param) {
             return param.data.name + ' | ' +
-                'info1:' + param.data.value[0] + 
-                ', info2:' + param.data.value[1] + 
+                'info1:' + param.data.value[0] +
+                ', info2:' + param.data.value[1] +
                 ', info3:' + param.data.value[2];
         }
         '''
@@ -404,10 +418,10 @@ Geo().add_schema(...).add_coordinate(...).add(
 )
 ```
 
-**更复杂的情况是**，加上额外数据后格式就是不对，或者会影响图表的其他组件。比如在上例的 `set_global_opts` 中加入了 visualmap 组件时，直接传入额外数据会导致 visualmap 显示不正常。这里我没有找到好的办法，所以想了一个_投机取巧_的方法。就是由于 python 字典跟 js 对象的格式是一样的，可以直接生成个字典的字符串写入 js ，然后再引用。于是上例可以写成：
+**更复杂的情况是**，加上额外数据后格式就是不对，或者会影响图表的其他组件。比如在上例的 `set_global_opts` 中加入了 visualmap 组件时，直接传入额外数据会导致 visualmap 显示不正常。这里我没有找到好的办法，所以想了一个*投机取巧*的方法。就是由于 python 字典跟 js 对象的格式是一样的，可以直接生成个字典的字符串写入 js ，然后再引用。于是上例可以写成：
 
 ```python
-data_pair = [('A', 10), ('B', 100), ('C', 1000)] 
+data_pair = [('A', 10), ('B', 100), ('C', 1000)]
 # 上面的 10, 100, 1000 就是用在 visualmap 中的数据值
 # 下面的则是用于 tooltip 的额外数据
 extend_data = {'A': [1,2,3], 'B': [4,5,6], 'c': [7,8,9]}
@@ -488,10 +502,10 @@ line.render()
 line.set_series_opts(
     label_opts=opts.LabelOpts(is_show=False)
 ).set_global_opts(
-    title_opts=opts.TitleOpts(title='Beijing AQI'), 
+    title_opts=opts.TitleOpts(title='Beijing AQI'),
     legend_opts=opts.LegendOpts(),
-    visualmap_opts=opts.VisualMapOpts(), 
-    datazoom_opts=opts.DataZoomOpts(), 
+    visualmap_opts=opts.VisualMapOpts(),
+    datazoom_opts=opts.DataZoomOpts(),
     tooltip_opts=opts.TooltipOpts(),
     toolbox_opts=opts.ToolboxOpts()
 )
@@ -506,7 +520,7 @@ Title 这里位置太靠边了，原图离最左边有点空隙：
 
 ```python
 line.set_global_opts(
-    title_opts=opts.TitleOpts(title='Beijing AQI', pos_left='1%'), 
+    title_opts=opts.TitleOpts(title='Beijing AQI', pos_left='1%'),
 )
 ```
 
@@ -546,20 +560,20 @@ line.set_global_opts(
             {'min':200, 'max': 300, 'color': '#AA069F'},
             {'min':300, 'color': '#AC3B2A'}
         ]
-    ), 
+    ),
 )
 ```
 
-Data Zoom 组件默认显示 20%-80%，看一下文档，发现有个 start\_value 参数，由于原图中就是显示最后一部分，所以可以使用这个参数搞定。但是第一次试了发现不行，原因是它已经给开始结束位置设置了默认值，所以要先将这两个值设为空值，start\_value 参数才有效。另外发现原图是可以在主图里面直接拖动的，所以要改一下 type 参数。这里就出现问题了，改了 type 之后，里面可以拖动了，但是外面的滚动条不见了。这里只好查看原图的代码抄答案，原来它用数组的形式定义了两个 Data Zoom 组件，一个在里面，一个在外面：
+Data Zoom 组件默认显示 20%-80%，看一下文档，发现有个 start_value 参数，由于原图中就是显示最后一部分，所以可以使用这个参数搞定。但是第一次试了发现不行，原因是它已经给开始结束位置设置了默认值，所以要先将这两个值设为空值，start_value 参数才有效。另外发现原图是可以在主图里面直接拖动的，所以要改一下 type 参数。这里就出现问题了，改了 type 之后，里面可以拖动了，但是外面的滚动条不见了。这里只好查看原图的代码抄答案，原来它用数组的形式定义了两个 Data Zoom 组件，一个在里面，一个在外面：
 
 ```python
 line.set_global_opts(
     datazoom_opts=[
         opts.DataZoomOpts(
             start_value='2014-06-01', range_start=None, range_end=None
-        ), 
+        ),
         opts.DataZoomOpts(type_='inside')
-    ], 
+    ],
 )
 ```
 
@@ -581,7 +595,7 @@ line.set_global_opts(
 )
 ```
 
-然后好像还差点什么？没错，Y 轴的分割线。估计应该是在 yaxis\_opts 里添加，于是试一下。发现分割线是有了，但是还差那些带箭头的虚线，查了一下文档，发现应该在 `set_series_opts` 里面通过 `opts.MarkLineOpts` 设置：
+然后好像还差点什么？没错，Y 轴的分割线。估计应该是在 yaxis_opts 里添加，于是试一下。发现分割线是有了，但是还差那些带箭头的虚线，查了一下文档，发现应该在 `set_series_opts` 里面通过 `opts.MarkLineOpts` 设置：
 
 ```python
 line.set_series_opts(
@@ -605,7 +619,7 @@ line.options['grid'] = {'left': '6%', 'right': '15%', 'bottom': '12%'}
 
 ![](https://paradiseeee.github.io/post-assets/20201221/3.png)
 
-___
+---
 
 鸣谢 & 推荐：[@AwesomeTang](https://blog.csdn.net/qq_27484665)
 
@@ -613,4 +627,4 @@ ___
 
 > 原文链接：https://paradiseeee.github.io/2020/12/21/PyEcharts-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/
 
-___
+---

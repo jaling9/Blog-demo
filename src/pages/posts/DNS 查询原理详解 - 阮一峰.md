@@ -5,7 +5,7 @@ pubDate: 2022-01-02
 # description: "This is the first post of my new Astro blog."
 author: "阮一峰"
 image:
-    url: "./img/photo.avif"
+    url: "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
 tags: ["CS", "互联网协议", "计算机网络"]
 ---
 
@@ -38,14 +38,14 @@ tags: ["CS", "互联网协议", "计算机网络"]
 它的查询语法如下（美元符号`$`是命令行提示符）。
 
 > ```
-> 
+>
 > $ dig @[DNS 服务器] [域名]
 > ```
 
 向 1.1.1.1 查询域名，就执行下面的命令。
 
 > ```
-> 
+>
 > $ dig @1.1.1.1 es6.ruanyifeng.com
 > ```
 
@@ -96,16 +96,16 @@ tags: ["CS", "互联网协议", "计算机网络"]
 所以，如果想要查询二级域名 `es6.ruanyifeng.com` 的 IP 地址，需要三个步骤。
 
 > 第一步，查询根域名服务器，获得顶级域名服务器`.com`（又称 TLD 服务器）的 IP 地址。
-> 
+>
 > 第二步，查询 TLD 服务器 `.com`，获得一级域名服务器 `ruanyifeng.com` 的 IP 地址。
-> 
+>
 > 第三步，查询一级域名服务器 `ruanyifeng.com`，获得二级域名 `es6` 的 IP 地址。
 
 下面依次演示这三个步骤。
 
 ## 五、根域名服务器
 
-根域名服务器全世界一共有13台（都是服务器集群）。它们的域名和 IP 地址如下。
+根域名服务器全世界一共有 13 台（都是服务器集群）。它们的域名和 IP 地址如下。
 
 ![](https://cdn.beekka.com/blogimg/asset/202208/bg2022080107.webp)
 
@@ -114,7 +114,7 @@ tags: ["CS", "互联网协议", "计算机网络"]
 操作系统会选其中一台，查询 TLD 服务器的 IP 地址。
 
 > ```
-> 
+>
 > $ dig @192.33.4.12 es6.ruanyifeng.com
 > ```
 
@@ -124,16 +124,16 @@ dig 命令的输出结果如下。
 
 ![](https://cdn.beekka.com/blogimg/asset/202208/bg2022080108.webp)
 
-因为它给不了 `es6.ruanyifeng.com` 的 IP 地址，所以输出结果中没有 ANSWER SECTION，只有一个 AUTHORITY SECTION，给出了`com.`的13台 TLD 服务器的域名。
+因为它给不了 `es6.ruanyifeng.com` 的 IP 地址，所以输出结果中没有 ANSWER SECTION，只有一个 AUTHORITY SECTION，给出了`com.`的 13 台 TLD 服务器的域名。
 
-下面还有一个 ADDITIONAL SECTION，给出了这13台 TLD 服务器的 IP 地址（包含 IPv4 和 IPv6 两个地址）。
+下面还有一个 ADDITIONAL SECTION，给出了这 13 台 TLD 服务器的 IP 地址（包含 IPv4 和 IPv6 两个地址）。
 
 ## 六、TLD 服务器
 
 有了 TLD 服务器的 IP 地址以后，我们再选一台接着查询。
 
 > ```
-> 
+>
 > $ dig @192.41.162.30 es6.ruanyifeng.com
 > ```
 
@@ -152,7 +152,7 @@ dig 命令的输出结果如下。
 第三步，再向一级域名的 DNS 服务器查询二级域名的 IP 地址。
 
 > ```
-> 
+>
 > $ dig @172.64.32.123 es6.ruanyifeng.com
 > ```
 
