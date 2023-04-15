@@ -1,16 +1,12 @@
 ---
-title: Python如何与MySQL实现交互及常用sql语句
-date: 
-updated:
-tags:
-- 转载
-- MySQL
-- Python
-categories:
-- 数据分析
-
-index_img: https://images.unsplash.com/photo-1533257266619-e841826ce739?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80
-banner_img: https://images.unsplash.com/photo-1533257266619-e841826ce739?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "python连接MySQL"
+pubDate: 2022-01-02
+# description: "This is the first post of my new Astro blog."
+author: "小满"
+image:
+    url: "./img/photo.avif"
+tags: ["python", "互联网协议", "计算机网络"]
 ---
 
 9 月初，我对 `python 爬虫` 燃起兴趣，但爬取到的数据多通道实时同步读写用`文件`并不方便，于是开始用起`mysql`。这篇笔记，我将整理近一个月的实战中最常用到的 `mysql` 语句，同时也将涉及到如何在`python3`中与 `mysql` 实现数据交换。

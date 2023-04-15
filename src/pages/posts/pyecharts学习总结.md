@@ -1,15 +1,12 @@
 ---
-title: PyEcharts学习总结
-date: 
-updated:
-tags:
-- 原创
-- Python
-categories:
-- 数据分析
-
-index_img: https://images.unsplash.com/photo-1488342994276-7c3bc0742042?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80
-banner_img: https://images.unsplash.com/photo-1488342994276-7c3bc0742042?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Pyechart"
+pubDate: 2022-01-02
+# description: "This is the first post of my new Astro blog."
+author: "xiaoman"
+image:
+    url: "./img/photo.avif"
+tags: ["python", "pyechart", "数据分析"]
 ---
 
 > pyecharts 分为 `v0.5.x` 和 `v1.0.0+` 两个版本，这篇总结针对新版本。

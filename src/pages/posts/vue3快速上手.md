@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Vue3快速上手"
-pubDate: 2023-07-01
+pubDate: 2023-01-01
 description: "This is the first post of my new Astro blog."
 author: "xiaoman"
 image:

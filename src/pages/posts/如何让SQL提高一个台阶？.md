@@ -1,14 +1,12 @@
 ---
-title: 如何让SQL提高一个台阶？
-date:
-updated:
-tags:
-  - 转载
-  - SQL
-categories:
-  - 数据分析
-index_img: https://images.unsplash.com/photo-1497864979123-ef3595423b92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80
-banner_img: https://images.unsplash.com/photo-1497864979123-ef3595423b92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "如何让SQL提高一个台阶"
+pubDate: 2022-01-02
+# description: "This is the first post of my new Astro blog."
+author: "xiaoman"
+image:
+    url: "./img/photo.avif"
+tags: ["CS", "互联网协议", "计算机网络"]
 ---
 
 > MySQl 专栏持续更新 不说晦涩难懂的东西 尽量输出容易理解 和 使用的 SQL 技巧 和 初中级开发不是很常用的但很有用的知识
@@ -29,9 +27,9 @@ SQL 写不好 加班少不了 日常工作中 SQL 是必不可少的一项技术
 
 准备一个数据表作为 数据演示 这里面一共 创建了三个索引
 
-- 联合索引 `sname`, `s_code`, `address`
-- 主键索引 `id`
-- 普通索引 `height`
+-   联合索引 `sname`, `s_code`, `address`
+-   主键索引 `id`
+-   普通索引 `height`
 
 ```
 SET NAMES utf8mb4;
@@ -151,16 +149,16 @@ EXPLAIN select create_time from student where address = "上海" and s_code = 1 
 
 加入我们建立 A,B 联合索引 他们在底层储存是什么样子呢？
 
-- 橙色代表字段 A
-- 浅绿色 代表字段 B
+-   橙色代表字段 A
+-   浅绿色 代表字段 B
 
 图解： ![图片.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a35b2ec784eb48109fe2916eade3c248~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
 
 我们可以看出几个特点
 
-- A 是有顺序的 1，1，2，2，3，4
-- B 是没有顺序的 1，2，1，4，1，2 这个是散列的
-- 如果 A 是等值的时候 B 是有序的 例如 （1，1），（1，2） 这里的 B 有序的 （2，1）,(2,4) B 也是有序的
+-   A 是有顺序的 1，1，2，2，3，4
+-   B 是没有顺序的 1，2，1，4，1，2 这个是散列的
+-   如果 A 是等值的时候 B 是有序的 例如 （1，1），（1，2） 这里的 B 有序的 （2，1）,(2,4) B 也是有序的
 
 这里应该就能看出 如果没有 A 的支持 B 的索引是散列的 不是连续的
 
@@ -230,9 +228,9 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 前提 如果创建 b,c,d 联合索引面
 
-- 如果 我 where 后面的条件是`c = 1 and d = 1`为什么不能走索引呢 如果没有 b 的话 你查询的值相当于 `*11` 我们都知道`*`是所有的意思也就是我能匹配到所有的数据
-- 如果 我 where 后面是 `b = 1 and d =1` 为什么会走索引呢？ 你等于查询的数据是 `1*1` 我可以通过前面 1 进行索引匹配 所以就可以走索引
-- 最左缀匹配原则的最重要的就是 第一个字段
+-   如果 我 where 后面的条件是`c = 1 and d = 1`为什么不能走索引呢 如果没有 b 的话 你查询的值相当于 `*11` 我们都知道`*`是所有的意思也就是我能匹配到所有的数据
+-   如果 我 where 后面是 `b = 1 and d =1` 为什么会走索引呢？ 你等于查询的数据是 `1*1` 我可以通过前面 1 进行索引匹配 所以就可以走索引
+-   最左缀匹配原则的最重要的就是 第一个字段
 
 我们接着看下一个失效场景
 
@@ -270,8 +268,8 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 ### 小总结
 
-- select \* 只有在返回结果集数量大于总结果集的 25% 就会造成索引失效 如果小于 不会造成索引失效但是会降低索引的效率
-- 范围查找有概率索引失效但是 但是在特定的情况下会生效 范围小就会使用 也可以理解为 返回结果集小就会使用索引
+-   select \* 只有在返回结果集数量大于总结果集的 25% 就会造成索引失效 如果小于 不会造成索引失效但是会降低索引的效率
+-   范围查找有概率索引失效但是 但是在特定的情况下会生效 范围小就会使用 也可以理解为 返回结果集小就会使用索引
 
 ## 使用函数
 
@@ -371,8 +369,8 @@ in 在结果集 大于 30%的时候索引失效
 
 ![图片.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/664a7329241840e888d5569d4b0e3475~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?) 这一个主要是 Mysql 自身优化的问题 我们都知道 OrderBy 是排序 那就代表我需要对数据进行排序 如果我走索引 索引是排好序的 但是我需要回表 消耗时间 另一种 我直接全表扫描排序 不用回表 也就是
 
-- 走索引 + 回表
-- 不走索引 直接全表扫描
+-   走索引 + 回表
+-   不走索引 直接全表扫描
 
 Mysql 认为直接全表扫面的速度比 回表的速度快所以就直接走索引了 在 Order By 的情况下 走全表扫描反而是更好的选择
 
@@ -384,9 +382,9 @@ Mysql 认为直接全表扫面的速度比 回表的速度快所以就直接走�
 
 ![图片.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8f7104ac9d684ce3b4fe43e97b6afaf2~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
 
-- 如果你是直接跳到这里 看看文章有多长 `建议收藏`
-- 如果你一步步看到这里 感觉有点帮助 `赞赞来一个`
-- 如果感觉文章有问题 建议评论区指出 `会修正`
+-   如果你是直接跳到这里 看看文章有多长 `建议收藏`
+-   如果你一步步看到这里 感觉有点帮助 `赞赞来一个`
+-   如果感觉文章有问题 建议评论区指出 `会修正`
 
 周五愉快 文章完结 🥰
 

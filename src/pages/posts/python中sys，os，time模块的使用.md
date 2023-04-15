@@ -1,15 +1,12 @@
 ---
-title: Python 系统模块常用方法
-date: 
-updated:
-tags:
-- 转载
-- Python
-categories:
-- 开发
-
-index_img: https://images.unsplash.com/photo-1488342994276-7c3bc0742042?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80
-banner_img: https://images.unsplash.com/photo-1517178111751-b10ed2bd1328?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "python中的sys os time模块"
+pubDate: 2022-01-02
+# description: "This is the first post of my new Astro blog."
+author: "小满"
+image:
+    url: "./img/photo.avif"
+tags: ["python"]
 ---
 ## sys模块
 

@@ -1,18 +1,15 @@
 ---
-title: WebSocket 教程-阮一峰
-date: 
-updated:
-tags:
-- 转载
-- 互联网协议
-categories:
-- 计算机
-index_img: https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
-banner_img: https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "websocket教程"
+pubDate: 2022-01-02
+# description: "This is the first post of my new Astro blog."
+author: "阮一峰"
+image:
+    url: "./img/photo.avif"
+tags: ["CS", "互联网协议", "计算机网络"]
 ---
 
 > 原文链接：https://www.ruanyifeng.com/blog/2017/05/websocket.html
-
 
 [WebSocket](https://websocket.org/) 是一种网络通信协议，很多高级功能都需要它。
 
@@ -36,7 +33,7 @@ banner_img: https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=r
 
 ## 二、简介
 
-WebSocket 协议在2008年诞生，2011年成为国际标准。所有浏览器都已经支持了。
+WebSocket 协议在 2008 年诞生，2011 年成为国际标准。所有浏览器都已经支持了。
 
 它的最大特点就是，服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，属于[服务器推送技术](https://en.wikipedia.org/wiki/Push_technology)的一种。
 
@@ -46,7 +43,7 @@ WebSocket 协议在2008年诞生，2011年成为国际标准。所有浏览器�
 
 （1）建立在 TCP 协议之上，服务器端的实现比较容易。
 
-（2）与 HTTP 协议有着良好的兼容性。默认端口也是80和443，并且握手阶段采用 HTTP 协议，因此握手时不容易屏蔽，能通过各种 HTTP 代理服务器。
+（2）与 HTTP 协议有着良好的兼容性。默认端口也是 80 和 443，并且握手阶段采用 HTTP 协议，因此握手时不容易屏蔽，能通过各种 HTTP 代理服务器。
 
 （3）数据格式比较轻量，性能开销小，通信高效。
 
@@ -57,7 +54,7 @@ WebSocket 协议在2008年诞生，2011年成为国际标准。所有浏览器�
 （6）协议标识符是`ws`（如果加密，则为`wss`），服务器网址就是 URL。
 
 > ```
-> 
+>
 > ws://example.com:80/some/path
 > ```
 
@@ -70,22 +67,22 @@ WebSocket 的用法相当简单。
 下面是一个网页脚本的例子（点击[这里](http://jsbin.com/muqamiqimu/edit?js,console)看运行结果），基本上一眼就能明白。
 
 > ```
-> 
+>
 > var ws = new WebSocket("wss://echo.websocket.org");
-> 
-> ws.onopen = function(evt) { 
->   console.log("Connection open ..."); 
+>
+> ws.onopen = function(evt) {
+>   console.log("Connection open ...");
 >   ws.send("Hello WebSockets!");
 > };
-> 
+>
 > ws.onmessage = function(evt) {
 >   console.log( "Received Message: " + evt.data);
 >   ws.close();
 > };
-> 
+>
 > ws.onclose = function(evt) {
 >   console.log("Connection closed.");
-> };      
+> };
 > ```
 
 ## 四、客户端的 API
@@ -97,7 +94,7 @@ WebSocket 客户端的 API 如下。
 WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 
 > ```
-> 
+>
 > var ws = new WebSocket('ws://localhost:8080');
 > ```
 
@@ -109,15 +106,15 @@ WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 
 `readyState`属性返回实例对象的当前状态，共有四种。
 
-> -   CONNECTING：值为0，表示正在连接。
-> -   OPEN：值为1，表示连接成功，可以通信了。
-> -   CLOSING：值为2，表示连接正在关闭。
-> -   CLOSED：值为3，表示连接已经关闭，或者打开连接失败。
+> -   CONNECTING：值为 0，表示正在连接。
+> -   OPEN：值为 1，表示连接成功，可以通信了。
+> -   CLOSING：值为 2，表示连接正在关闭。
+> -   CLOSED：值为 3，表示连接已经关闭，或者打开连接失败。
 
 下面是一个示例。
 
 > ```
-> 
+>
 > switch (ws.readyState) {
 >   case WebSocket.CONNECTING:
 >     // do something
@@ -142,7 +139,7 @@ WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 实例对象的`onopen`属性，用于指定连接成功后的回调函数。
 
 > ```
-> 
+>
 > ws.onopen = function () {
 >   ws.send('Hello Server!');
 > }
@@ -151,7 +148,7 @@ WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 如果要指定多个回调函数，可以使用`addEventListener`方法。
 
 > ```
-> 
+>
 > ws.addEventListener('open', function (event) {
 >   ws.send('Hello Server!');
 > });
@@ -162,14 +159,14 @@ WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 实例对象的`onclose`属性，用于指定连接关闭后的回调函数。
 
 > ```
-> 
+>
 > ws.onclose = function(event) {
 >   var code = event.code;
 >   var reason = event.reason;
 >   var wasClean = event.wasClean;
 >   // handle close event
 > };
-> 
+>
 > ws.addEventListener("close", function(event) {
 >   var code = event.code;
 >   var reason = event.reason;
@@ -183,12 +180,12 @@ WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 实例对象的`onmessage`属性，用于指定收到服务器数据后的回调函数。
 
 > ```
-> 
+>
 > ws.onmessage = function(event) {
 >   var data = event.data;
 >   // 处理数据
 > };
-> 
+>
 > ws.addEventListener("message", function(event) {
 >   var data = event.data;
 >   // 处理数据
@@ -198,12 +195,12 @@ WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 注意，服务器数据可能是文本，也可能是二进制数据（`blob`对象或`Arraybuffer`对象）。
 
 > ```
-> 
+>
 > ws.onmessage = function(event){
 >   if(typeof event.data === String) {
 >     console.log("Received data string");
 >   }
-> 
+>
 >   if(event.data instanceof ArrayBuffer){
 >     var buffer = event.data;
 >     console.log("Received arraybuffer");
@@ -214,13 +211,13 @@ WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 除了动态判断收到的数据类型，也可以使用`binaryType`属性，显式指定收到的二进制数据类型。
 
 > ```
-> 
+>
 > // 收到的是 blob 数据
 > ws.binaryType = "blob";
 > ws.onmessage = function(e) {
 >   console.log(e.data.size);
 > };
-> 
+>
 > // 收到的是 ArrayBuffer 数据
 > ws.binaryType = "arraybuffer";
 > ws.onmessage = function(e) {
@@ -235,14 +232,14 @@ WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 发送文本的例子。
 
 > ```
-> 
+>
 > ws.send('your message');
 > ```
 
 发送 Blob 对象的例子。
 
 > ```
-> 
+>
 > var file = document
 >   .querySelector('input[type="file"]')
 >   .files[0];
@@ -252,7 +249,7 @@ WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 发送 ArrayBuffer 对象的例子。
 
 > ```
-> 
+>
 > // Sending canvas ImageData as ArrayBuffer
 > var img = canvas_context.getImageData(0, 0, 400, 320);
 > var binary = new Uint8Array(img.data.length);
@@ -267,10 +264,10 @@ WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 实例对象的`bufferedAmount`属性，表示还有多少字节的二进制数据没有发送出去。它可以用来判断发送是否结束。
 
 > ```
-> 
+>
 > var data = new ArrayBuffer(10000000);
 > socket.send(data);
-> 
+>
 > if (socket.bufferedAmount === 0) {
 >   // 发送完毕
 > } else {
@@ -283,11 +280,11 @@ WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。
 实例对象的`onerror`属性，用于指定报错时的回调函数。
 
 > ```
-> 
+>
 > socket.onerror = function(event) {
 >   // handle error event
 > };
-> 
+>
 > socket.addEventListener("error", function(event) {
 >   // handle error event
 > });
@@ -316,22 +313,22 @@ WebSocket 服务器的实现，可以查看维基百科的[列表](https://en.wi
 举例来说，下面是一个 Bash 脚本`counter.sh`。
 
 > ```
-> 
+>
 > #!/bin/bash
-> 
+>
 > echo 1
 > sleep 1
-> 
+>
 > echo 2
 > sleep 1
-> 
+>
 > echo 3
 > ```
 
-命令行下运行这个脚本，会输出1、2、3，每个值之间间隔1秒。
+命令行下运行这个脚本，会输出 1、2、3，每个值之间间隔 1 秒。
 
 > ```
-> 
+>
 > $ bash ./counter.sh
 > 1
 > 2
@@ -341,27 +338,27 @@ WebSocket 服务器的实现，可以查看维基百科的[列表](https://en.wi
 现在，启动`websocketd`，指定这个脚本作为服务。
 
 > ```
-> 
+>
 > $ websocketd --port=8080 bash ./counter.sh
 > ```
 
 上面的命令会启动一个 WebSocket 服务器，端口是`8080`。每当客户端连接这个服务器，就会执行`counter.sh`脚本，并将它的输出推送给客户端。
 
 > ```
-> 
+>
 > var ws = new WebSocket('ws://localhost:8080/');
-> 
+>
 > ws.onmessage = function(event) {
 >   console.log(event.data);
 > };
 > ```
 
-上面是客户端的 JavaScript 代码，运行之后会在控制台依次输出1、2、3。
+上面是客户端的 JavaScript 代码，运行之后会在控制台依次输出 1、2、3。
 
 有了它，就可以很方便地将命令行的输出，发给浏览器。
 
 > ```
-> 
+>
 > $ websocketd --port=8080 ls
 > ```
 
@@ -379,9 +376,9 @@ WebSocket 服务器的实现，可以查看维基百科的[列表](https://en.wi
 websocketd 的实质，就是命令行的 WebSocket 代理。只要命令行可以执行的程序，都可以通过它与浏览器进行 WebSocket 通信。下面是一个 Node 实现的回声服务[`greeter.js`](https://github.com/joewalnes/websocketd/blob/master/examples/nodejs/greeter.js)。
 
 > ```
-> 
+>
 > process.stdin.setEncoding('utf8');
-> 
+>
 > process.stdin.on('readable', function() {
 >   var chunk = process.stdin.read();
 >   if (chunk !== null) {
@@ -393,7 +390,7 @@ websocketd 的实质，就是命令行的 WebSocket 代理。只要命令行可�
 启动这个脚本的命令如下。
 
 > ```
-> 
+>
 > $ websocketd --port=8080 node ./greeter.js
 > ```
 

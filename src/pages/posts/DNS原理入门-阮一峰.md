@@ -1,14 +1,12 @@
 ---
-title: DNS原理入门-阮一峰
-date: 
-updated:
-tags:
-- 转载
-- 互联网协议
-categories:
-- 计算机
-index_img: https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
-banner_img: https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "DNS原理入门"
+pubDate: 2022-01-02
+# description: "This is the first post of my new Astro blog."
+author: "阮一峰"
+image:
+    url: "./img/photo.avif"
+tags: ["CS", "互联网协议", "计算机网络"]
 ---
 
 > 原文链接：https://www.ruanyifeng.com/blog/2016/06/dns.html

@@ -1,31 +1,31 @@
 ---
-title: Markdown语法
-date: 
-updated:
-tags:
-- 原创
-- markdown
-categories:
-- 其他
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "MarkDown语法"
+pubDate: 2022-01-02
+# description: "This is the first post of my new Astro blog."
+author: "xiaoman"
+image:
+    url: "./img/photo.avif"
+tags: ["CS", "互联网协议", "计算机网络"]
 ---
 
 ## 表格
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
 
-| Syntax | Description |
-| --- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
 
 ## 任务列表
 
-- [x] Write the press release
-- [x] Update the website
-- [ ] Contact the media
+-   [x] Write the press release
+-   [x] Update the website
+-   [ ] Contact the media
 
 ## 表情符号
 
@@ -46,19 +46,19 @@ sfs :unamused:
 这是一句话[^1]
 [^1]: 这是对应的脚注
 
-[^1]: 参考资料1
-[^2]: 参考资料2
+[^1]: 参考资料 1
+[^2]: 参考资料 2
 
 ## 便签
 
 > 可选类别
-  primary
-  secondary
-  success
-  danger
-  warning
-  info
-  light
+> primary
+> secondary
+> success
+> danger
+> warning
+> info
+> light
 
 ```
 {% note success %}
@@ -67,7 +67,7 @@ sfs :unamused:
 ```
 
 {% note success %}
-两种方式：上面是第一种方式，下面是html方法
+两种方式：上面是第一种方式，下面是 html 方法
 {% endnote %}
 
 ```html
@@ -76,11 +76,12 @@ sfs :unamused:
 
 <p class="note note-danger">便签</p>
 
-
 ## 按钮
+
 ```
 {% btn url, text, title %}或者
 <a class="btn" href="https://hexo.fluid-dev.com/docs/guide/#tag-%E6%8F%92%E4%BB%B6" title="title">tag</a>
 ```
+
 {% btn (https://hexo.fluid-dev.com/docs/guide/#tag-%E6%8F%92%E4%BB%B6), text, title %}
 <a class="btn" href="https://hexo.fluid-dev.com/docs/guide/#tag-%E6%8F%92%E4%BB%B6" title="title">tag</a>

@@ -1,15 +1,12 @@
 ---
-title: MySQL优化
-date: 2022/11/15 19:30
-updated:
-tags:
-- 转载
-- SQL
-categories:
-- 数据分析
-category_bar: true
-index_img: https://images.unsplash.com/photo-1662842611249-cd4784b216b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
-banner_img: https://images.unsplash.com/photo-1662842611249-cd4784b216b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "MySQL优化"
+pubDate: 2022-01-02
+# description: "This is the first post of my new Astro blog."
+author: "小满"
+image:
+    url: "./img/photo.avif"
+tags: ["SQL", "互联网协议", "计算机网络"]
 ---
 
 > 有情怀，有干货，微信搜索【**三太子敖丙**】关注这个不一样的程序员。

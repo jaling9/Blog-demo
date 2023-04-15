@@ -1,14 +1,12 @@
 ---
-title: MVC，MVP 和 MVVM 的图示-阮一峰
-date: 
-updated:
-tags:
-- 转载
-- 
-categories:
-- 开发
-index_img: https://images.unsplash.com/photo-1580824026089-8b429c3834f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1734&q=80
-banner_img: https://images.unsplash.com/photo-1580824026089-8b429c3834f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1734&q=80
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "MVC MVP MVVM"
+pubDate: 2022-01-02
+# description: "This is the first post of my new Astro blog."
+author: "阮一峰"
+image:
+    url: "./img/photo.avif"
+tags: ["CS", "互联网协议", "计算机网络"]
 ---
 
 复杂的软件必须有清晰合理的架构，否则无法开发和维护。
@@ -19,11 +17,11 @@ banner_img: https://images.unsplash.com/photo-1580824026089-8b429c3834f0?ixlib=r
 
 ![](https://www.ruanyifeng.com/blogimg/asset/2015/bg2015020102.jpg)
 
-（题图：摄于瓦伦西亚，西班牙，2014年8月）
+（题图：摄于瓦伦西亚，西班牙，2014 年 8 月）
 
 ## 一、MVC
 
-MVC模式的意思是，软件可以分成三个部分。
+MVC 模式的意思是，软件可以分成三个部分。
 
 ![](https://www.ruanyifeng.com/blogimg/asset/2015/bg2015020104.png)
 
@@ -47,7 +45,7 @@ MVC模式的意思是，软件可以分成三个部分。
 
 ![](https://www.ruanyifeng.com/blogimg/asset/2015/bg2015020106.png)
 
-另一种是直接通过controller接受指令。
+另一种是直接通过 controller 接受指令。
 
 ![](https://www.ruanyifeng.com/blogimg/asset/2015/bg2015020107.png)
 
@@ -73,7 +71,7 @@ MVP 模式将 Controller 改名为 Presenter，同时改变了通信方向。
 
 2\. View 与 Model 不发生联系，都通过 Presenter 传递。
 
-3\. View 非常薄，不部署任何业务逻辑，称为"被动视图"（Passive View），即没有任何主动性，而 Presenter非常厚，所有逻辑都部署在那里。
+3\. View 非常薄，不部署任何业务逻辑，称为"被动视图"（Passive View），即没有任何主动性，而 Presenter 非常厚，所有逻辑都部署在那里。
 
 ## 五、MVVM
 
@@ -81,6 +79,6 @@ MVVM 模式将 Presenter 改名为 ViewModel，基本上与 MVP 模式完全一�
 
 ![](https://www.ruanyifeng.com/blogimg/asset/2015/bg2015020110.png)
 
-唯一的区别是，它采用双向绑定（data-binding）：View的变动，自动反映在 ViewModel，反之亦然。[Angular](https://angularjs.org/) 和 [Ember](http://emberjs.com/) 都采用这种模式。
+唯一的区别是，它采用双向绑定（data-binding）：View 的变动，自动反映在 ViewModel，反之亦然。[Angular](https://angularjs.org/) 和 [Ember](http://emberjs.com/) 都采用这种模式。
 
 （完）

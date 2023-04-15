@@ -1,15 +1,12 @@
 ---
-title: NumPy生成自定义数组
-date: 2022/11/15 00:00:00
-updated:
-tags:
-- 原创
-- Python
-categories:
-- 数据分析
-category_bar: true
-index_img: https://images.unsplash.com/photo-1543115329-6fa27326449e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80
-banner_img: https://images.unsplash.com/photo-1543115329-6fa27326449e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Numpy API"
+pubDate: 2022-01-02
+# description: "This is the first post of my new Astro blog."
+author: "xiaoman"
+image:
+    url: "./img/photo.avif"
+tags: ["python", "numpy", "数据分析"]
 ---
 
 ## 特殊数组的创建方法

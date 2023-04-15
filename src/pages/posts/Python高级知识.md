@@ -1,15 +1,12 @@
 ---
-title: Python高级内容
-date: 2022/11/15 19:30
-updated:
-tags:
-- 转载
-- Python
-categories:
-- 数据分析
-category_bar: true
-index_img: https://images.unsplash.com/photo-1526488807855-309186804587?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2371&q=80
-banner_img: https://images.unsplash.com/photo-1526488807855-309186804587?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2371&q=80
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Python高级内容"
+pubDate: 2022-01-02
+# description: "This is the first post of my new Astro blog."
+author: "廖雪峰"
+image:
+    url: "./img/photo.avif"
+tags: ["python", "互联网协议", "计算机网络"]
 ---
 > 摘自廖雪峰老师python教程：
 > 原文链接：https://www.liaoxuefeng.com/wiki/1016959663602400/1017451662295584
