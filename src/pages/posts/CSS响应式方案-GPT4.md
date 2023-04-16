@@ -10,7 +10,7 @@ tags: ["CSS"]
 ---
 CSS响应式设计（Responsive Web Design，RWD）是指通过使用不同的CSS样式规则来使网站在不同设备和屏幕尺寸上都能呈现良好的布局和视觉效果的设计方法。以下是一些常见的CSS响应式方案及案例：
 
-1.  媒体查询（Media Queries）
+1.  **媒体查询**（Media Queries）
 
 媒体查询是CSS响应式设计中最常用的技术之一。通过媒体查询，我们可以针对不同的屏幕尺寸和设备类型应用不同的CSS样式。
 
@@ -44,7 +44,7 @@ CSS响应式设计（Responsive Web Design，RWD）是指通过使用不同的CS
 }
 ```
 
-2.  盒模型（Box-sizing）
+2.  **盒模型**（Box-sizing）
 
 使用`box-sizing`属性可以更轻松地控制元素的宽度和高度，尤其是在设置内边距和边框时。通过将`box-sizing`属性设置为`border-box`，元素的宽度和高度将包括其内边距和边框。
 
@@ -56,7 +56,7 @@ CSS响应式设计（Responsive Web Design，RWD）是指通过使用不同的CS
 }
 ```
 
-3.  百分比布局（Percentage-based Layout）
+3.  **百分比布局**（Percentage-based Layout）
 
 使用百分比单位为元素的宽度和高度指定一个相对于其容器的比例。这可以使元素在不同尺寸的屏幕上更好地自适应。
 
@@ -78,7 +78,7 @@ CSS响应式设计（Responsive Web Design，RWD）是指通过使用不同的CS
 }
 ```
 
-4.  Flexbox布局（Flexible Box Layout）
+4.  **Flexbox布局**（Flexible Box Layout）
 
 Flexbox是一种现代化的布局方式，可以让元素在容器中自动分配空间和自适应大小。这对于响应式设计非常有用。
 
@@ -95,7 +95,7 @@ Flexbox是一种现代化的布局方式，可以让元素在容器中自动分�
 }
 ```
 
-5.  网格布局（CSS Grid Layout）
+5.  **网格布局**（CSS Grid Layout）
 
 CSS Grid Layout是一种强大的二维布局系统，允许开发人员轻松地创建复杂的响应式布局。
 
