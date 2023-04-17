@@ -4,26 +4,22 @@ import Greeting from "../components/Greeting";
 const pageTitle = "小满的博客";
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <div class="indexContent"><h2>你好！我是小满，一个数据分析师和编程爱好者！</h2>
+    <div class="indexContent">
+        <!-- <h2>你好！我是小满，一个数据分析师和编程爱好者！</h2> -->
         <p>
-            你好，我是一名<strong>数据分析师</strong>和<strong>设计和编程爱好者</strong
-            >。我对于数据分析和数据挖掘
-            有着浓厚的兴趣，喜欢利用编程语言和数据工具来解决实际问题。我熟练掌握多种编程语言，包括<strong
-                >Python</strong
-            >、<strong>TypeScript</strong>、<strong>Golang</strong>、<strong
-                >Node.js</strong
-            >和<strong>SQL</strong>等，并且善于使用各种数据可视化工具，比如Tableau和Power BI
-            等。我也有着良好的数学和统计基础，能够运用这些理论知识来解决实际问题。我非常热爱学习和探索新技术，希望能够不断提升自己的技能和知识，成为一名优秀的<strong
-                >数据分析师</strong
-            >和<strong>程序员</strong>。
+            Hello, I am a <strong>data analyst</strong> and a passionate enthusiast of <strong>designing and programming</strong>. I have a profound interest in data analysis and mining and enjoy solving practical problems using programming languages and data tools. I am proficient in several programming languages, including <strong>Python</strong>, <strong>TypeScript</strong>, <strong>Golang</strong>, <strong>Node.js</strong>, and <strong>SQL</strong>, and excel in using various data visualization tools such as Tableau and Power BI. Additionally, I possess a strong foundation in mathematics and statistics, enabling me to apply theoretical knowledge to solving real-world problems. I am highly enthusiastic about learning and exploring new technologies and aspire to continually enhance my skills and knowledge, ultimately becoming an outstanding <strong>data analyst</strong> and <strong>programmer</strong>."
         </p>
     
-        <a href="/blog/" > go
+        <!-- <a href="/blog/" > go -->
             <!-- <img src="/public/arrow-right-svgrepo-com.svg" height="30px" width="50px" > -->
-        </a>
+        <!-- </a> -->
     </div>
 </BaseLayout>
 <style>
+    p{
+        font-size: 1.1rem;
+        margin-top: 240px;
+    }
     a img{
         display: block;
         margin: 0 auto;
@@ -53,7 +49,7 @@ strong {
     text-decoration: none !important;
     font-weight: bold;
     width: 150px;
-    padding: 12px 36px;
+    padding: 12px 24px;
     border: #252525 1.5px solid;
     border-radius: 4px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);

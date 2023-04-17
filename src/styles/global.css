@@ -128,7 +128,7 @@ a:focus {
     .nav-links a {
         display: inline-block;
         padding: 8px 20px;
-        /* border: #000 solid 2px; */
+        border: #000 solid 2px;
         border-radius: 4px;
         text-decoration: none;
     }
