@@ -7,7 +7,7 @@ const pageTitle = "小满的博客";
     <div class="indexContent">
         <!-- <h2>你好！我是小满，一个数据分析师和编程爱好者！</h2> -->
         <p>
-            Hello, I am a <strong>data analyst</strong> and a passionate enthusiast of <strong>designing and programming</strong>. I have a profound interest in data analysis and mining and enjoy solving practical problems using programming languages and data tools. I am proficient in several programming languages, including <strong>Python</strong>, <strong>TypeScript</strong>, <strong>Golang</strong>, <strong>Node.js</strong>, and <strong>SQL</strong>, and excel in using various data visualization tools such as Tableau and Power BI. Additionally, I possess a strong foundation in mathematics and statistics, enabling me to apply theoretical knowledge to solving real-world problems. I am highly enthusiastic about learning and exploring new technologies and aspire to continually enhance my skills and knowledge, ultimately becoming an outstanding <strong>data analyst</strong> and <strong>programmer</strong>."
+            Hello, I am a <strong>data analyst</strong> and a passionate enthusiast of <strong>designing and programming</strong>. I have a profound interest in data analysis and mining and enjoy solving practical problems using programming languages and data tools. I am proficient in several programming languages, including <strong>Python</strong>, <strong>TypeScript</strong>, <strong>Golang</strong>, <strong>Node.js</strong>, and <strong>SQL</strong>, and excel in using various data visualization tools such as Tableau and Power BI. Additionally, I possess a strong foundation in mathematics and statistics, enabling me to apply theoretical knowledge to solving real-world problems. I am highly enthusiastic about learning and exploring new technologies and aspire to continually enhance my skills and knowledge, ultimately becoming an outstanding <strong>data analyst</strong> and <strong>programmer</strong>.
         </p>
     
         <!-- <a href="/blog/" > go -->
@@ -16,9 +16,14 @@ const pageTitle = "小满的博客";
     </div>
 </BaseLayout>
 <style>
+    /* 选中P的第一个字母H */
+    p::first-letter{
+       
+        font-weight: bold;
+    }
     p{
         font-size: 1.1rem;
-        margin-top: 180px;
+        margin: 120px 0px;
     }
     a img{
         display: block;
